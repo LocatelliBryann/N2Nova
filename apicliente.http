@@ -1,0 +1,13 @@
+GET http://localhost:3000/jogador HTTP/1.1
+Content-Type: application/json
+###
+
+POST http://localhost:3000/jogador HTTP/1.1
+Content-Type: application/json
+
+{
+    "codigo_jogador":5,
+    "nome_jogador":"Carlos",
+    "habilidade_principal": "penis"
+}
+###
