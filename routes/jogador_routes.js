@@ -5,6 +5,7 @@ let router = express.Router()
 
 router.get('/jogador', jogador.all)
 router.post('/jogador', jogador.create)
-// mimimi
+router.put('/jogador/:codigo_jogador', jogador.update)
+
 
 export {router}
