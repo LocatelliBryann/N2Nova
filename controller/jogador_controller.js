@@ -28,6 +28,21 @@ jogador.create = async function(req, res) {
     }
 }
 
+jogador.update = async function(req, res) {
+    try {
+        let codigo_jogador = req.params.codigo_jogador
+        let jogador = req.body
+        let sql = "UPDATE jogador SET nome_jogador=?, habilidade_principal=? WHERE codigo_jogador=?;"
+        let values = [jogador.nome_jogador,  jogador.habilidade_principal, codigo_jogador, jogador]
+        let result = await con.query(sql, values)
+        res.send({
+            status:"Atualização do Jogador efetuada com sucesso!",
+            result:result
+        })
 
+    } catch (e) {
+        console.log("Erro ao Atualizar os dados", e)
+    }
+}
 
 export {jogador}

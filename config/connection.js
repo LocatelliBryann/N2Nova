@@ -5,10 +5,11 @@ async function connect() {
         return global.connection
 
     const mysql = mysql2
-    const connection = await mysql.createConnection("mysql://root:password@localhost:3307/esportes")
+    const connection = await mysql.createConnection("mysql://root:root@localhost:3306/esportes")
     
-    console.log("Conectado ao SGBD MySQL")
+    console.log("Conectado ao Banco MySQL")
     global.connection = connection
     return connection
 }
 export default connect
+ 

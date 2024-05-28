@@ -6,8 +6,17 @@ POST http://localhost:3000/jogador HTTP/1.1
 Content-Type: application/json
 
 {
-    "codigo_jogador":5,
+    "codigo_jogador":6,
+    "nome_jogador":"Bryann",
+    "habilidade_principal": "Amassar"
+}
+###
+
+PUT http://localhost:3000/jogador/5 HTTP/1.1
+Content-Type: application/json
+
+{
     "nome_jogador":"Carlos",
-    "habilidade_principal": "penis"
+    "habilidade_principal": "Ser ruim"
 }
 ###
