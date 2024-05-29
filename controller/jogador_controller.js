@@ -44,5 +44,19 @@ jogador.update = async function(req, res) {
         console.log("Erro ao Atualizar os dados", e)
     }
 }
+jogador.delete = async function(req, res) {
+    try {
+        let codigo_jogador = req.params.codigo_jogador
+        let sql = "DELETE FROM jogador WHERE codigo_jogador=?;"
+        let result = await con.query(sql, [codigo_jogador])
+        res.send({
+            status:"Delete do Jogador efetuada com sucesso!",
+            result:result
+        })
+
+    } catch (e) {
+        console.log("Erro ao Deletar os dados", e)
+    }
+}
 
 export {jogador}
